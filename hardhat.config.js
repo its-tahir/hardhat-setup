@@ -20,8 +20,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 module.exports = {
   solidity: "0.8.19",
-  defaultNetwork: 'hardhat',
+  defaultNetwork: 'sepolia',
   networks: {
-    hardhat: {}
+    hardhat: {},
+    sepolia: {
+      url: "https://sepolia.infura.io/v3/4c1dcf3c417444a09cca375cc81c9017",
+      accounts: ['###meta mask private key ###']
+    }
   }
 };
